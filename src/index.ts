@@ -1,12 +1,12 @@
 import express, { Response } from 'express';
 import log from './utils/logger';
-import { cors } from './middleware';
+import middleware from './middleware';
 
 const port: number = Number(process.env.PORT) || 8080;
 
 const server = express();
 
-server.use(cors);
+server.use(middleware.cors);
 server.use(express.json());
 
 server.get('/', (_: any, res: Response) => {

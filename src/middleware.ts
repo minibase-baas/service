@@ -7,6 +7,8 @@ function cors(_: any, res: Response, next: Function) {
   next();
 }
 
-export {
-  cors,
+export { cors };
+
+export default {
+  cors: cors,
 };
