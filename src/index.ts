@@ -1,4 +1,4 @@
-import express, { Response } from 'express';
+import express from 'express';
 import log from './utils/logger';
 import middleware from './middleware';
 import db from './utils/db';
