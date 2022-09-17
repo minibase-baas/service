@@ -1,4 +1,5 @@
-import { Response } from 'express';
+import { Request, Response } from 'express';
+import log from './utils/logger';
 
 function cors(_: any, res: Response, next: Function) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -7,8 +8,11 @@ function cors(_: any, res: Response, next: Function) {
   next();
 }
 
-export { cors };
+function logger(req: Request, _: any, next: Function) {
+  next();
+  log('request', { method: req.method, route: req.route });
+}
 
-export default {
-  cors: cors,
-};
+export { cors, logger };
+
+export default { cors, logger };

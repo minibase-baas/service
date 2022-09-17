@@ -2,7 +2,7 @@
   "name": "minibase-service",
   "version": "1.0.0",
   "scripts": {
-    "dev": "DB=test-db.json npx nodemon src/index.ts --ignore 'test-db.json'",
+    "dev": "DB=test-db.json npx nodemon src/index.ts --ignore 'test-db.json' --ignore 'secrets.json'",
     "build": "npx tsc",
     "prettier": "prettier --write ."
   },
