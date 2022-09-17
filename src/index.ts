@@ -10,6 +10,7 @@ server.use(middleware.cors);
 server.use(express.json());
 
 server.get('/', (_: any, res: Response) => {
+  log('request', { method: 'GET', route: '/' });
   res.json({
     message: 'Success',
     payload: 'Hello, World!',
@@ -17,5 +18,5 @@ server.get('/', (_: any, res: Response) => {
 });
 
 server.listen(port, () => {
-  log('startup', port);
+  log('startup', { port: port });
 });
