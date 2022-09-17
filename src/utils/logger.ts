@@ -11,7 +11,7 @@ export default (event: string, logData: any) => {
       }
 
       console.log(
-        `Started server at ${chalk.green(`0.0.0.0:${logData.port}`)}`,
+        `Started server at ${chalk.green(`http://0.0.0.0:${logData.port}`)}`,
       );
       break;
     case 'request':
